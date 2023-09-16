@@ -9,10 +9,13 @@ from .fun_获取源文件列表 import fun_获取源文件列表
 
 
 class MaterialInfoModel(BaseModel):
-    size: str
-    material_suffix: list[str]
-    material_num: list[str]
-    material_title: str
+    material_size: str
+    material_suffix: str
+
+    material_count: int
+    material_count_title: str
+
+    material_format_title: str
 
 
 def run_获取素材信息(material_path: str):
@@ -36,8 +39,11 @@ def run_获取素材信息(material_path: str):
         ma_title = ""
 
     return MaterialInfoModel(
-        size=dir_size,
-        material_suffix=[obj[1] for obj in ma_list],
-        material_num=[f"{obj[0]}个 {obj[1]} 文件" for obj in ma_list],
-        material_title=ma_title,
+        material_size=dir_size,
+        material_suffix=",".join([obj[1] for obj in ma_list]),
+        material_count_title=",".join(
+            [f"{obj[0]}个 {obj[1]} 文件" for obj in ma_list]
+        ),
+        material_format_title=ma_title,
+        material_count=ma_list[0][0],
     )
