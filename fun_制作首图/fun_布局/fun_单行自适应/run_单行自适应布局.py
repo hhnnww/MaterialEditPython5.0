@@ -2,8 +2,7 @@ from typing import Literal
 
 from PIL import Image
 
-from fun_图片处理 import fun_图片竖向拼接
-
+from ....fun_图片处理 import fun_图片竖向拼接
 from ..fun_构建图片 import fun_构建图片
 from ..type import MakeSTModel
 from .fun_1_构建所有单行 import fun_1_所有单行

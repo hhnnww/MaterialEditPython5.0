@@ -1,6 +1,6 @@
 from PIL import Image
 
-from fun_图片处理 import (
+from ..fun_图片处理 import (
     fun_单行字体转图片,
     fun_图片居中粘贴,
     fun_图片横向拼接,
@@ -10,7 +10,6 @@ from fun_图片处理 import (
     fun_获取字体,
     fun_长本文分行,
 )
-
 from .type import OneLineInfoModel
 
 

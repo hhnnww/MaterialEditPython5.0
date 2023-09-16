@@ -2,8 +2,7 @@ from typing import Literal
 
 from PIL import Image
 
-from fun_图片处理 import fun_图片横向拼接, fun_图片添加圆角, fun_图片裁剪
-
+from ....fun_图片处理 import fun_图片横向拼接, fun_图片添加圆角, fun_图片裁剪
 from ..type import PicOneLineModel
 
 

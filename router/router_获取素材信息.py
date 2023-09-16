@@ -8,12 +8,12 @@ from fun_获取素材信息.run_获取素材信息 import MaterialInfoModel, run
 router = APIRouter(prefix="/GetMaterialInfo")
 
 
-class Item(BaseModel):
+class RequestMaterialInfoModel(BaseModel):
     rootPath: str
     tbName: str
 
 
-class Res(PathModel, MaterialInfoModel):
+class ResponseMaterialInfoModel(PathModel, MaterialInfoModel):
     preview_image_list: list[ImageModel]
     preview_image_count: int
 
@@ -21,8 +21,8 @@ class Res(PathModel, MaterialInfoModel):
     effect_image_count: int
 
 
-@router.post("", response_model=Res)
-def get_material_info(item: Item):
+@router.post("", response_model=ResponseMaterialInfoModel)
+def get_material_info(item: RequestMaterialInfoModel):
     path_model = fun_构建文件夹(root_path=item.rootPath)
     ma_info_model = run_获取素材信息(material_path=path_model.material_path)
 

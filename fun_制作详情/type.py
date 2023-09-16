@@ -10,7 +10,7 @@ class ImageModel(BaseModel):
     ratio: float
 
 
-class MakeXQModel(BaseModel):
+class MakeProductPageModel(BaseModel):
     """
     image_dir_path:str 预览图目录或效果图目录
     use_image:int 使用的图片张数
@@ -26,13 +26,13 @@ class MakeXQModel(BaseModel):
     """
 
     image_dir_path: str
-    use_image: int
-    sort: bool
-    line_num: int
-    line_ratio: float
-    material_path: str
-    has_info: bool
-    xq_width: int
+    image_folder: int
+    image_sort: bool
+    online_image_number: int
+    image_radio_number: float
+    material_folder: str
+    contains_image_information: bool
+    product_page_width: int
     spacing: int
     crop_position: Literal["start", "center", "end"]
-    img_list: list[str] = []
+    image_list: list[str] = []

@@ -1,6 +1,6 @@
 from PIL import Image
 
-from fun_图片处理 import fun_制作圆形横框, fun_单行字体转图片, fun_图片居中粘贴, fun_图片竖向拼接, fun_获取字体
+from ..fun_图片处理 import fun_制作圆形横框, fun_单行字体转图片, fun_图片居中粘贴, fun_图片竖向拼接, fun_获取字体
 
 
 def fun_制作详情标题(title: str, desc: str) -> Image.Image:
